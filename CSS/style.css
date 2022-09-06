@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+:root {
+  --primary: "Josefin Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: var(--primary);
+  text-transform: uppercase;
+  list-style: none;
+}
+
+#header {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 80px;
+  align-items: center;
+  background-color: #040404;
+}
+
+#header::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(240, 168, 94, 1) 45%,
+    rgba(255, 81, 0, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(240, 168, 94, 1) 45%,
+    rgba(255, 81, 0, 1) 100%
+  );
+  position: absolute;
+  top: 80px;
+  transition: 2s ease;
+  border-radius: 5px;
+}
+#header:hover:after {
+  width: 100vw;
+}
+
+#lista-menu {
+  display: flex;
+  margin-right: 50px;
+  text-align: center;
+}
+#lista-menu a {
+  padding: 10px 0px;
+  color: #fff;
+  margin: 0 15px;
+}
+#logo a img {
+  height: 40px;
+  margin: 0 30px;
+  transition: all 0.3s;
+}
+#logo a img:hover {
+  transform: scale(1.2);
+}
+
+/*dasdsada ul li:before {
+  content: "\12345";
+  margin: 0 1px;
+  color: #f49817; 
+
+}
+*/
+
+.btn-cv {
+  position: relative;
+  outline: none;
+  border: none;
+  background-color: #f49817;
+  padding: 10px 15px;
+  color: white;
+  cursor: pointer;
+  margin: 0 30px;
+}
+.item-menu {
+  position: relative;
+}
+.item-menu::after {
+  content: "";
+  height: 3px;
+  width: 0vw;
+  background-color: #f49817;
+  position: absolute;
+  top: 27px;
+  left: 0px;
+  transition: 0.7s ease;
+  border-radius: 5px;
+}
+.item-menu:hover::after {
+  width: 100%;
+}
+
+#header {
+  animation-name: entra;
+  animation-duration: 1.5s;
+}
+@keyframes entra {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.btn-cv::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  height: 36px;
+  width: 5px;
+  top: 0;
+  left: 0px;
+  transition: 0.3s ease;
+}
+.btn-cv:hover::after {
+  width: 0;
+}
+.btn-cv::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  height: 36px;
+  width: 5px;
+  top: 0;
+  left: 132px;
+  transition: 0.3s ease;
+}
+
+.btn-cv:hover::before {
+  width: 0;
+  transform: translate(3px, 0);
+}
